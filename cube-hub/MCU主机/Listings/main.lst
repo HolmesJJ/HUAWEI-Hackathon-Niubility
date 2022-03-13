@@ -1,0 +1,302 @@
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 09:04:35 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "config.h"
+   2          
+   3          uchar show1=0;
+   4          uchar show2=0;
+   5          uchar show3=0;
+   6          
+   7          uchar result;
+   8          uchar key;
+   9          
+  10          uchar check;
+  11          uchar AA = 0;
+  12          uchar check1 = 0;
+  13          
+  14          uchar xdata order = 0;
+  15          uchar xdata time;
+  16          uchar xdata soundmark[3] = {0x00,0x00,0x00};
+  17          uchar xdata sit1;
+  18          uchar xdata sit2;
+  19          uchar xdata sit3;
+  20          uchar xdata sta=0;
+  21          uchar start;
+  22          uint msTime;
+  23          void main()
+  24          {
+  25   1              uchar i;
+  26   1              uchar xdata RxBuf[32];  
+  27   1              delay_ms(500);
+  28   1              EA=1;
+  29   1              InitADC();
+  30   1              init_Timer0();
+  31   1              delay_ms(100);
+  32   1              get_ADC_Result(7);
+  33   1              get_ADC_Result(7);
+  34   1              
+  35   1              if(get_ADC_Result(7)>134)//µçÑ¹µÍ
+  36   1              {
+  37   2                      show1=betL;
+  38   2                      delay_ms(3000);
+  39   2                      show1=0;
+  40   2                      delay_ms(10);
+  41   2                      EA=0;
+  42   2                      while(1);//ÐÝÃß
+  43   2              }
+  44   1              
+  45   1              
+  46   1              show1=kaiji;
+  47   1              delay_ms(1000);
+  48   1              show1=0;
+  49   1              
+  50   1              
+  51   1              init_Timer0();
+  52   1              init_NRF24L01() ;
+  53   1              uart_init();
+  54   1              
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 09:04:35 PAGE 2   
+
+  55   1              
+  56   1      //      uart_printf("hello");
+  57   1              SetTX_Mode();
+  58   1              nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+  59   1              SPI_RW_Reg(WRITE_REG+STATUS,0XFF);  
+  60   1              SetRX_Mode();
+  61   1              
+  62   1              while(1)
+  63   1              {
+  64   2                      
+  65   2      //              printNum(order);
+  66   2      //              uart_print("  ");
+  67   2      //              printNum(sit1);
+  68   2      //              uart_print("  ");
+  69   2      //              printNum(sit2);
+  70   2      //              uart_print("  ");
+  71   2      //              printNum(sit3);
+  72   2      //              uart_print("\n");
+  73   2                      
+  74   2                      
+  75   2      //              uart_send(check+0x30);
+  76   2                                      
+  77   2                      
+  78   2                      
+  79   2                      
+  80   2                      
+  81   2                      
+  82   2                      if(check==0)switch (order)
+  83   2                      {
+  84   3                              case 0:
+  85   3                              show1=soundmark[0];
+  86   3                              show2=soundmark[1];
+  87   3                              show3=soundmark[2];
+  88   3                              key=5;
+  89   3                                      break;
+  90   3                              case 1:
+  91   3                              show1=soundmark[0];
+  92   3                              show3=soundmark[1];
+  93   3                              show2=soundmark[2];
+  94   3                              key=7;
+  95   3                                      break;
+  96   3                              case 2:
+  97   3                              show2=soundmark[0];
+  98   3                              show1=soundmark[1];
+  99   3                              show3=soundmark[2];
+ 100   3                              key=11;
+ 101   3                                      break;
+ 102   3                              case 3:
+ 103   3                              show2=soundmark[0];
+ 104   3                              show3=soundmark[1];
+ 105   3                              show1=soundmark[2];
+ 106   3                              key=15;
+ 107   3                                      break;
+ 108   3                              case 4:
+ 109   3                              show3=soundmark[0];
+ 110   3                              show1=soundmark[1];
+ 111   3                              show2=soundmark[2];
+ 112   3                              key=19;
+ 113   3                                      break;
+ 114   3                              case 5:
+ 115   3                              show3=soundmark[0];
+ 116   3                              show2=soundmark[1];
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 09:04:35 PAGE 3   
+
+ 117   3                              show1=soundmark[2];
+ 118   3                              key=21;
+ 119   3                                      break;
+ 120   3                      }
+ 121   2                      if(check != 0 && AA ==0)
+ 122   2                      {
+ 123   3                              start=0;
+ 124   3                              if(check==1)
+ 125   3                              {
+ 126   4                                      check1 =1;
+ 127   4                                      if(msTime>500)
+ 128   4                                      {
+ 129   5                                              show1=yes;
+ 130   5                                              show2=yes;
+ 131   5                                              show3=yes;
+ 132   5                                      }
+ 133   4                                      else
+ 134   4                                      {
+ 135   5                                              show1=0;
+ 136   5                                              show2=0;
+ 137   5                                              show3=0;
+ 138   5                                      }
+ 139   4                                      
+ 140   4                              }
+ 141   3                              else if(check==2)
+ 142   3                              {
+ 143   4                                      check1 = 0;
+ 144   4                                      if(msTime>500)
+ 145   4                                      {
+ 146   5                                              show1=no;
+ 147   5                                              show2=no;
+ 148   5                                              show3=no;
+ 149   5                                      }
+ 150   4                                      else
+ 151   4                                      {
+ 152   5                                              show1=0;
+ 153   5                                              show2=0;
+ 154   5                                              show3=0;
+ 155   5                                      }
+ 156   4                              }
+ 157   3                      }
+ 158   2                      else if(AA >= 1)
+ 159   2                      {
+ 160   3                              if(check1==1)
+ 161   3                              {
+ 162   4                                              show1=yes;
+ 163   4                                              show2=yes;
+ 164   4                                              show3=yes;
+ 165   4      
+ 166   4                                      
+ 167   4                              }
+ 168   3                              else if(check1==0)
+ 169   3                              {
+ 170   4                                              show1=no;
+ 171   4                                              show2=no;
+ 172   4                                              show3=no;
+ 173   4                              }
+ 174   3                      }
+ 175   2                      
+ 176   2                      sit1=check_AD();
+ 177   2                      
+ 178   2                      
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 09:04:35 PAGE 4   
+
+ 179   2                              
+ 180   2      //              if(start==1)
+ 181   2      //              {
+ 182   2                              if(sit1!=0 && (sit1+sit2+sit3)==6 )     
+ 183   2                              {
+ 184   3      ////                            if(order==0 && sit1==1 && sit2==2 && sit3==3){check=1;}
+ 185   3      ////                            else if(order==1 && sit1==1 && sit2==3 && sit3==2){check=1;}
+ 186   3      ////                            else if(order==2 && sit1==2 && sit2==1 && sit3==3){check=1;}
+ 187   3      ////                            else if(order==3 && sit1==3 && sit2==1 && sit3==2){check=1;}
+ 188   3      ////                            else if(order==4 && sit1==2 && sit2==3 && sit3==1){check=1;}
+ 189   3      ////                            else if(order==5 && sit1==3 && sit2==2 && sit3==1){check=1;}
+ 190   3                                      
+ 191   3                                      if(order==0 && sit1==2 && sit2==3 && sit3==1){check=1;}
+ 192   3                                      else if(order==1 && sit1==2 && sit2==1 && sit3==3){check=1;}
+ 193   3                                      else if(order==2 && sit1==3 && sit2==2 && sit3==1){check=1;}
+ 194   3                                      else if(order==3 && sit1==1 && sit2==2 && sit3==3){check=1;}
+ 195   3                                      else if(order==4 && sit1==3 && sit2==1 && sit3==2){check=1;}
+ 196   3                                      else if(order==5 && sit1==1 && sit2==3 && sit3==2){check=1;}
+ 197   3                                      else
+ 198   3                                      {
+ 199   4                                                                              //err
+ 200   4                                              check=2;
+ 201   4                                      }
+ 202   3                                      
+ 203   3                                      
+ 204   3                              }
+ 205   2                              else 
+ 206   2                              {
+ 207   3                                      check=0;
+ 208   3                              }
+ 209   2                              uart_send(check+0x30);
+ 210   2      //              }
+ 211   2                      
+ 212   2                              if(msTime%100>50 && sta==0)
+ 213   2                              {
+ 214   3                                      sta=1;
+ 215   3                                      
+ 216   3                                      TxBuf[0]=1;
+ 217   3                                      TxBuf[1]=show2;
+ 218   3                                      
+ 219   3                                      SetTX_Mode();
+ 220   3                                      nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+ 221   3                                      SPI_RW_Reg(WRITE_REG+STATUS,0XFF);
+ 222   3                                      
+ 223   3                                      TxBuf[0]=1;
+ 224   3                                      TxBuf[1]=show2;
+ 225   3      
+ 226   3                                      SetTX_Mode();
+ 227   3                                      nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+ 228   3                                      SPI_RW_Reg(WRITE_REG+STATUS,0XFF);                      
+ 229   3                                      SetRX_Mode();
+ 230   3                              }
+ 231   2                              else if(msTime%100<50 && sta==1)
+ 232   2                              {
+ 233   3                                      sta=0;
+ 234   3                                      TxBuf[0]=2;
+ 235   3                                      TxBuf[1]=show3;
+ 236   3                                      
+ 237   3                                      SetTX_Mode();
+ 238   3                                      nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+ 239   3                                      SPI_RW_Reg(WRITE_REG+STATUS,0XFF);  
+ 240   3                                      
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 09:04:35 PAGE 5   
+
+ 241   3                                      TxBuf[0]=2;
+ 242   3                                      TxBuf[1]=show3;
+ 243   3                                      
+ 244   3                                      SetTX_Mode();
+ 245   3                                      nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+ 246   3                                      SPI_RW_Reg(WRITE_REG+STATUS,0XFF);
+ 247   3                                      SetRX_Mode();
+ 248   3                              }
+ 249   2                      
+ 250   2                      
+ 251   2                      
+ 252   2                      
+ 253   2                              
+ 254   2              
+ 255   2                      if(nRF24L01_RxPacket(RxBuf)!=0)
+ 256   2                      {
+ 257   3                              if(RxBuf[0]==1)
+ 258   3                              {
+ 259   4                                      sit2=RxBuf[1];
+ 260   4                              }
+ 261   3                              if(RxBuf[0]==2)
+ 262   3                              {
+ 263   4                                      sit3=RxBuf[1];
+ 264   4                              }
+ 265   3                              SetRX_Mode();
+ 266   3                      }
+ 267   2                              
+ 268   2              }
+ 269   1      }
+*** WARNING C280 IN LINE 25 OF main.c: 'i': unreferenced local variable
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    751    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =      9      32
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     11       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

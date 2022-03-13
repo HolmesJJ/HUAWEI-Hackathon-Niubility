@@ -1,0 +1,117 @@
+C51 COMPILER V9.56.0.0   UART                                                              04/09/2019 04:25:36 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN .\Objects\uart.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE uart.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\uart.l
+                    -st) OBJECT(.\Objects\uart.obj)
+
+line level    source
+
+   1          #include "config.h"
+   2          
+   3          void uart_init()
+   4          {
+   5   1              SCON = 0x50;            //8位数据,可变波特率
+   6   1              AUXR |= 0x01;           //串口1选择定时器2为波特率发生器
+   7   1              AUXR |= 0x04;           //定时器2时钟为Fosc,即1T
+   8   1              T2L = 0xE8;             //设定定时初值
+   9   1              T2H = 0xFF;             //设定定时初值
+  10   1              AUXR |= 0x10;           //启动定时器2
+  11   1      }
+  12          
+  13          void uart_send(uchar dat)
+  14          {
+  15   1              SBUF = dat;
+  16   1              while(!TI);//等待发送完毕
+  17   1              TI = 0;    
+  18   1      }
+  19          
+  20          void uart_print(uchar *str)
+  21          {
+  22   1              while(*str!=0)
+  23   1              {
+  24   2                      uart_send(*str);
+  25   2                      str++;
+  26   2              }
+  27   1      }
+  28          
+  29          void printNum(uint num)
+  30          {
+  31   1              char i;
+  32   1              uchar sss[5];
+  33   1              for(i=4;i>=0;i--)
+  34   1              {
+  35   2                      sss[i]=num%10;
+  36   2                      num/=10;
+  37   2              }
+  38   1              for(i=0;i<5;i++)
+  39   1              {
+  40   2                      uart_send(sss[i]+0x30);
+  41   2              }
+  42   1      }
+  43          
+  44          //void UART_Printf(const char * fmt,...)
+  45          //{
+  46          //  char xdata UART_String[128];
+  47          //  va_list ap;
+  48          //  va_start(ap,fmt);
+  49          //  vsprintf(UART_String,fmt,ap);
+  50          //  uart_print((uchar *)UART_String);
+  51          //  va_end(ap);
+  52          //}        
+  53          
+  54          
+C51 COMPILER V9.56.0.0   UART                                                              04/09/2019 04:25:36 PAGE 2   
+
+  55          uchar temp;
+  56          uchar xdata startReceive;
+  57          uchar xdata RxTimes;
+  58          uchar xdata uart_RxBuf[20];
+  59          
+  60          extern xdata uchar order;
+  61          extern xdata uchar time;
+  62          extern xdata uchar soundmark[3];
+  63          
+  64          void uart_handel() interrupt 4
+  65          {
+  66   1              if(RI)
+  67   1              {
+  68   2                      RI=0;
+  69   2                      temp=SBUF;
+  70   2                      
+  71   2                      if(temp=='A')
+  72   2                      {
+  73   3                              startReceive=1;
+  74   3                              RxTimes=0;
+  75   3                      }
+  76   2                      else if(temp=='D')
+  77   2                      {
+  78   3                              order=uart_RxBuf[0]-0x30;
+  79   3                              time=(uart_RxBuf[2]-0x30)*10+(uart_RxBuf[3]-0x30);
+  80   3                              
+  81   3                              soundmark[0]=(uart_RxBuf[5]-0x30)*10+(uart_RxBuf[6]-0x30);
+  82   3                              soundmark[1]=(uart_RxBuf[7]-0x30)*10+(uart_RxBuf[8]-0x30);
+  83   3                              soundmark[2]=(uart_RxBuf[9]-0x30)*10+(uart_RxBuf[10]-0x30);
+  84   3                      }
+  85   2                      else
+  86   2                      {
+  87   3                              uart_RxBuf[RxTimes]=temp;
+  88   3                              RxTimes++;
+  89   3                      }
+  90   2              }
+  91   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    288    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =     22    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       7
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "620339375438",
+    "firebase_url": "https://deafapp-6e281.firebaseio.com",
+    "project_id": "deafapp-6e281",
+    "storage_bucket": "deafapp-6e281.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620339375438:android:3e20158f1725eccf",
+        "android_client_info": {
+          "package_name": "edu.nyp.deafapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620339375438-h8703kudo7829p38n7u52evp9qu10gpb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.nyp.deafapp",
+            "certificate_hash": "28ecb56ac9815420c909ff0fd8842a09b26ce940"
+          }
+        },
+        {
+          "client_id": "620339375438-mrb72ho2qf2r5f7ohdaf0ubi6hmdaifq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEBZElnZcJ1VdB4nlBQ0EO365kcuop6EM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620339375438-mrb72ho2qf2r5f7ohdaf0ubi6hmdaifq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

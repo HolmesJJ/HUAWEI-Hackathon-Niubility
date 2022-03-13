@@ -1,0 +1,183 @@
+Added Component: Designator=DZ1(DianZhen)
+Added Component: Designator=DZ2(DianZhen)
+Added Component: Designator=DZ3(DianZhen)
+Added Component: Designator=DZ4(DianZhen)
+Added Component: Designator=P1(HDR1X5)
+Added Component: Designator=U1(SOIC16_L)
+Added Component: Designator=U2(SOIC16_L)
+Added Component: Designator=U3(SOIC16_L)
+Added Component: Designator=U4(SOIC16_L)
+Added Pin To Net: NetName=DS Pin=P1-1
+Added Pin To Net: NetName=DS Pin=U1-14
+Added Net: Name=DS
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=GND Pin=U1-13
+Added Pin To Net: NetName=GND Pin=U2-8
+Added Pin To Net: NetName=GND Pin=U2-13
+Added Pin To Net: NetName=GND Pin=U3-8
+Added Pin To Net: NetName=GND Pin=U3-13
+Added Pin To Net: NetName=GND Pin=U4-8
+Added Pin To Net: NetName=GND Pin=U4-13
+Added Net: Name=GND
+Added Pin To Net: NetName=HANG1 Pin=DZ1-1
+Added Pin To Net: NetName=HANG1 Pin=DZ3-1
+Added Pin To Net: NetName=HANG1 Pin=U3-15
+Added Net: Name=HANG1
+Added Pin To Net: NetName=HANG2 Pin=DZ1-3
+Added Pin To Net: NetName=HANG2 Pin=DZ3-3
+Added Pin To Net: NetName=HANG2 Pin=U3-1
+Added Net: Name=HANG2
+Added Pin To Net: NetName=HANG3 Pin=DZ1-5
+Added Pin To Net: NetName=HANG3 Pin=DZ3-5
+Added Pin To Net: NetName=HANG3 Pin=U3-2
+Added Net: Name=HANG3
+Added Pin To Net: NetName=HANG4 Pin=DZ1-7
+Added Pin To Net: NetName=HANG4 Pin=DZ3-7
+Added Pin To Net: NetName=HANG4 Pin=U3-3
+Added Net: Name=HANG4
+Added Pin To Net: NetName=HANG5 Pin=DZ1-9
+Added Pin To Net: NetName=HANG5 Pin=DZ3-9
+Added Pin To Net: NetName=HANG5 Pin=U3-4
+Added Net: Name=HANG5
+Added Pin To Net: NetName=HANG6 Pin=DZ1-11
+Added Pin To Net: NetName=HANG6 Pin=DZ3-11
+Added Pin To Net: NetName=HANG6 Pin=U3-5
+Added Net: Name=HANG6
+Added Pin To Net: NetName=HANG7 Pin=DZ1-13
+Added Pin To Net: NetName=HANG7 Pin=DZ3-13
+Added Pin To Net: NetName=HANG7 Pin=U3-6
+Added Net: Name=HANG7
+Added Pin To Net: NetName=HANG8 Pin=DZ1-15
+Added Pin To Net: NetName=HANG8 Pin=DZ3-15
+Added Pin To Net: NetName=HANG8 Pin=U3-7
+Added Net: Name=HANG8
+Added Pin To Net: NetName=HANG9 Pin=DZ2-1
+Added Pin To Net: NetName=HANG9 Pin=DZ4-1
+Added Pin To Net: NetName=HANG9 Pin=U4-15
+Added Net: Name=HANG9
+Added Pin To Net: NetName=HANG10 Pin=DZ2-3
+Added Pin To Net: NetName=HANG10 Pin=DZ4-3
+Added Pin To Net: NetName=HANG10 Pin=U4-1
+Added Net: Name=HANG10
+Added Pin To Net: NetName=HANG11 Pin=DZ2-5
+Added Pin To Net: NetName=HANG11 Pin=DZ4-5
+Added Pin To Net: NetName=HANG11 Pin=U4-2
+Added Net: Name=HANG11
+Added Pin To Net: NetName=HANG12 Pin=DZ2-7
+Added Pin To Net: NetName=HANG12 Pin=DZ4-7
+Added Pin To Net: NetName=HANG12 Pin=U4-3
+Added Net: Name=HANG12
+Added Pin To Net: NetName=HANG13 Pin=DZ2-9
+Added Pin To Net: NetName=HANG13 Pin=DZ4-9
+Added Pin To Net: NetName=HANG13 Pin=U4-4
+Added Net: Name=HANG13
+Added Pin To Net: NetName=HANG14 Pin=DZ2-11
+Added Pin To Net: NetName=HANG14 Pin=DZ4-11
+Added Pin To Net: NetName=HANG14 Pin=U4-5
+Added Net: Name=HANG14
+Added Pin To Net: NetName=HANG15 Pin=DZ2-13
+Added Pin To Net: NetName=HANG15 Pin=DZ4-13
+Added Pin To Net: NetName=HANG15 Pin=U4-6
+Added Net: Name=HANG15
+Added Pin To Net: NetName=HANG16 Pin=DZ2-15
+Added Pin To Net: NetName=HANG16 Pin=DZ4-15
+Added Pin To Net: NetName=HANG16 Pin=U4-7
+Added Net: Name=HANG16
+Added Pin To Net: NetName=LIE1 Pin=DZ1-2
+Added Pin To Net: NetName=LIE1 Pin=DZ2-2
+Added Pin To Net: NetName=LIE1 Pin=U1-15
+Added Net: Name=LIE1
+Added Pin To Net: NetName=LIE2 Pin=DZ1-4
+Added Pin To Net: NetName=LIE2 Pin=DZ2-4
+Added Pin To Net: NetName=LIE2 Pin=U1-1
+Added Net: Name=LIE2
+Added Pin To Net: NetName=LIE3 Pin=DZ1-6
+Added Pin To Net: NetName=LIE3 Pin=DZ2-6
+Added Pin To Net: NetName=LIE3 Pin=U1-2
+Added Net: Name=LIE3
+Added Pin To Net: NetName=LIE4 Pin=DZ1-8
+Added Pin To Net: NetName=LIE4 Pin=DZ2-8
+Added Pin To Net: NetName=LIE4 Pin=U1-3
+Added Net: Name=LIE4
+Added Pin To Net: NetName=LIE5 Pin=DZ1-10
+Added Pin To Net: NetName=LIE5 Pin=DZ2-10
+Added Pin To Net: NetName=LIE5 Pin=U1-4
+Added Net: Name=LIE5
+Added Pin To Net: NetName=LIE6 Pin=DZ1-12
+Added Pin To Net: NetName=LIE6 Pin=DZ2-12
+Added Pin To Net: NetName=LIE6 Pin=U1-5
+Added Net: Name=LIE6
+Added Pin To Net: NetName=LIE7 Pin=DZ1-14
+Added Pin To Net: NetName=LIE7 Pin=DZ2-14
+Added Pin To Net: NetName=LIE7 Pin=U1-6
+Added Net: Name=LIE7
+Added Pin To Net: NetName=LIE8 Pin=DZ1-16
+Added Pin To Net: NetName=LIE8 Pin=DZ2-16
+Added Pin To Net: NetName=LIE8 Pin=U1-7
+Added Net: Name=LIE8
+Added Pin To Net: NetName=LIE9 Pin=DZ3-2
+Added Pin To Net: NetName=LIE9 Pin=DZ4-2
+Added Pin To Net: NetName=LIE9 Pin=U2-15
+Added Net: Name=LIE9
+Added Pin To Net: NetName=LIE10 Pin=DZ3-4
+Added Pin To Net: NetName=LIE10 Pin=DZ4-4
+Added Pin To Net: NetName=LIE10 Pin=U2-1
+Added Net: Name=LIE10
+Added Pin To Net: NetName=LIE11 Pin=DZ3-6
+Added Pin To Net: NetName=LIE11 Pin=DZ4-6
+Added Pin To Net: NetName=LIE11 Pin=U2-2
+Added Net: Name=LIE11
+Added Pin To Net: NetName=LIE12 Pin=DZ3-8
+Added Pin To Net: NetName=LIE12 Pin=DZ4-8
+Added Pin To Net: NetName=LIE12 Pin=U2-3
+Added Net: Name=LIE12
+Added Pin To Net: NetName=LIE13 Pin=DZ3-10
+Added Pin To Net: NetName=LIE13 Pin=DZ4-10
+Added Pin To Net: NetName=LIE13 Pin=U2-4
+Added Net: Name=LIE13
+Added Pin To Net: NetName=LIE14 Pin=DZ3-12
+Added Pin To Net: NetName=LIE14 Pin=DZ4-12
+Added Pin To Net: NetName=LIE14 Pin=U2-5
+Added Net: Name=LIE14
+Added Pin To Net: NetName=LIE15 Pin=DZ3-14
+Added Pin To Net: NetName=LIE15 Pin=DZ4-14
+Added Pin To Net: NetName=LIE15 Pin=U2-6
+Added Net: Name=LIE15
+Added Pin To Net: NetName=LIE17 Pin=DZ3-16
+Added Pin To Net: NetName=LIE17 Pin=DZ4-16
+Added Pin To Net: NetName=LIE17 Pin=U2-7
+Added Net: Name=LIE17
+Added Pin To Net: NetName=NetU1_9 Pin=U1-9
+Added Pin To Net: NetName=NetU1_9 Pin=U2-14
+Added Net: Name=NetU1_9
+Added Pin To Net: NetName=NetU2_9 Pin=U2-9
+Added Pin To Net: NetName=NetU2_9 Pin=U3-14
+Added Net: Name=NetU2_9
+Added Pin To Net: NetName=NetU3_9 Pin=U3-9
+Added Pin To Net: NetName=NetU3_9 Pin=U4-14
+Added Net: Name=NetU3_9
+Added Pin To Net: NetName=SH_CP Pin=P1-3
+Added Pin To Net: NetName=SH_CP Pin=U1-11
+Added Pin To Net: NetName=SH_CP Pin=U2-11
+Added Pin To Net: NetName=SH_CP Pin=U3-11
+Added Pin To Net: NetName=SH_CP Pin=U4-11
+Added Net: Name=SH_CP
+Added Pin To Net: NetName=ST_CP Pin=P1-2
+Added Pin To Net: NetName=ST_CP Pin=U1-12
+Added Pin To Net: NetName=ST_CP Pin=U2-12
+Added Pin To Net: NetName=ST_CP Pin=U3-12
+Added Pin To Net: NetName=ST_CP Pin=U4-12
+Added Net: Name=ST_CP
+Added Pin To Net: NetName=VCC Pin=P1-5
+Added Pin To Net: NetName=VCC Pin=U1-10
+Added Pin To Net: NetName=VCC Pin=U1-16
+Added Pin To Net: NetName=VCC Pin=U2-10
+Added Pin To Net: NetName=VCC Pin=U2-16
+Added Pin To Net: NetName=VCC Pin=U3-10
+Added Pin To Net: NetName=VCC Pin=U3-16
+Added Pin To Net: NetName=VCC Pin=U4-10
+Added Pin To Net: NetName=VCC Pin=U4-16
+Added Net: Name=VCC
+Added Class: Name=顶板原理图
+Added Room: Name=顶板原理图

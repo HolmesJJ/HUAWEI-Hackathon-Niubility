@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">AVTant</string>
+
+    <string name="face_api">ab9c8dfb72af4ed1b79c8cb6ddb00d82</string>
+    <string name="endpoint">https://southeastasia.api.cognitive.microsoft.com/face/v1.0</string>
+
+    <string name="activity_login">Login</string>
+    <string name="activity_face_recognition">Face Recognition</string>
+    <string name="activity_reset_password">Reset Password</string>
+    <string name="fragment_study">Study</string>
+    <string name="fragment_task">Task</string>
+    <string name="fragment_jump">Jump for Fun</string>
+    <string name="fragment_cube">Cube Hub</string>
+    <string name="fragment_logout">Logout</string>
+    <string name="fragment_exercise">Pronunciation Exercise</string>
+
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="prompt_ip_address">IP Address</string>
+    <string name="action_ip_address">Confirm</string>
+    <string name="prompt_validation_code">Validation Code</string>
+    <string name="action_validation_code">Send</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_reset_password">Reset Password</string>
+    <string name="action_other_login_method">Other Login Method</string>
+    <string name="action_forget_password">Forget Password</string>
+
+    <string name="initialization">Initialization</string>
+    <string name="standard">Standard</string>
+    <string name="test">Test</string>
+    <string name="standard_test">Standard Test</string>
+    <string name="result">Result</string>
+
+    <string name="ar_animation_tv">AR Animation</string>
+    <string name="standard_pronunciation_tv">Standard Pronunciation</string>
+    <string name="test_pronunciation_tv">Test Pronunciation</string>
+    <string name="compare_result_tv">Compare Result</string>
+
+    <string name="standard_btn">Only-S</string>
+    <string name="test_btn">Only-T</string>
+    <string name="standard_test_btn">S-T</string>
+    <string name="result_btn">Result</string>
+
+    <string name="organ_txt">Organ</string>
+
+    <string name="tutorial_btn">Tutorial</string>
+    <string name="exercise1_btn">Exercise1</string>
+    <string name="exercise2_btn">Exercise2</string>
+    <string name="start_btn">Start</string>
+
+    <string name="ipa_count">IPA: 1</string>
+    <string name="ipa_word">Ready</string>
+    <string name="ipa_timer">00:00</string>
+    <string name="ipa_start_btn">Start</string>
+
+    <string name="content_title">Content</string>
+    <string name="content_is_finish">Done</string>
+</resources>

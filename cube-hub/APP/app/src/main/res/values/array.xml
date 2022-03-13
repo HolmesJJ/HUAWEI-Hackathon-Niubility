@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Data">
+        <item>Apple</item>
+        <item>Fly</item>
+        <item>Cry</item>
+        <item>Sky</item>
+        <item>Sign</item>
+        <item>Away</item>
+        <item>Okay</item>
+        <item>Flow</item>
+        <item>Crow</item>
+        <item>Allow</item>
+    </string-array>
+</resources>

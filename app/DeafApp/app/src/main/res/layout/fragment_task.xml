@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+        <View
+            android:id="@+id/split_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignBottom="@+id/split_line1"
+            android:layout_alignParentTop="true">
+
+            <edu.nyp.deafapp.CustomView.CircleProgressBar
+                android:id="@+id/tasks_view"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                tc:circleColor="@color/colorWhite"
+                tc:circleProgressBarRadius="80dip"
+                tc:ringBgColor="@color/colorWhite2"
+                tc:ringColor="@color/colorPrimary"
+                tc:strokeWidth="20dip" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignTop="@+id/split_line1"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/title_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="18sp"
+                    android:text="@string/content_title"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="@string/content_is_finish"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/task_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/title_list_view"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorWhite2">
+
+            </ListView>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

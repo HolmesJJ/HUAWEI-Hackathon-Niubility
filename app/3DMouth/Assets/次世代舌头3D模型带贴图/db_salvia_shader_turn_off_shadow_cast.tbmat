@@ -1,0 +1,71 @@
+@Sub SRDisplacement = SRDisplacementHeight
+    Displacement Map = @Tex file "../03_Mappings/zbrushOutput/salvia_mesh16bit_displace_1006.tif" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/zbrushOutput/salvia_mesh16bit_displace_1006.tif" srgb 0 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Scale = 0.0160937
+    Scale Center = 0.5
+    Relative Scale = 1
+@End
+
+@Sub SRSurface = SRSurfaceNormalMap
+    Normal Map = @Tex file "../03_Mappings/substance/gums/Normal Map from Mesh 1006.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/Normal Map from Mesh 1006.png" srgb 0 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Scale & Bias = 1
+    Flip X = 0
+    Flip Y = 1
+    Flip Z = 0
+    Object Space = 0
+@End
+
+@Sub SRMicrosurface = SRMicrosurfaceGlossMap
+    Gloss Map = nil
+    Channel = 0
+    Gloss = 0.7
+    Invert = 0
+@End
+
+@Sub SRAlbedo = SRAlbedoMap
+    Albedo Map = nil
+    Color = 1 0.991726 0.991137
+@End
+
+@Sub SRDiffusion = SRDiffusionLambertian
+@End
+
+@Sub SRReflectivity = SRReflectivitySpecularMap
+    Specular Map = nil
+    Channel;specular = 4
+    Intensity = 0.0271501
+    Color = 1 1 1
+    Fresnel = 0
+    Fresnel Color = 1 1 1
+    Conserve Energy = 1
+@End
+
+@Sub SRReflection = SRReflectionGGX
+    Horizon Occlusion = 4
+@End
+
+@Sub SRTransparency = SRTransparencyRefraction
+    Index of Refraction = 1.003
+    Distant Background = 0
+    Use Microsurface = 1
+    Tint = 1 1 1
+    Albedo Tint = 1
+    Caustics = 1
+    Mask = nil
+    Channel;mask = 0
+    Cutout = @Tex file "../03_Mappings/substance/gums/salvia_mask.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/salvia_mask.png" srgb 1 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Channel;cutout = 0
+    Use Albedo Alpha = 0
+    Use Dither = 1
+@End
+
+@Sub SRMerge = SRMerge
+    Texture Tiling = 1
+    Tile U = 1
+    Offset U = 0
+    Tile V = 1
+    Offset V = 0
+    Wrap = 1
+    Aniso = 2
+    Filter = 1
+@End
+

@@ -1,0 +1,124 @@
+C51 COMPILER V9.56.0.0   UART                                                              04/09/2019 08:44:47 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN .\Objects\uart.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE uart.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\uart.l
+                    -st) OBJECT(.\Objects\uart.obj)
+
+line level    source
+
+   1          #include "config.h"
+   2          
+   3          void uart_init()
+   4          {
+   5   1              SCON = 0x50;            //8位数据,可变波特率
+   6   1              AUXR |= 0x01;           //串口1选择定时器2为波特率发生器
+   7   1              AUXR |= 0x04;           //定时器2时钟为Fosc,即1T
+   8   1              T2L = 0xE8;             //设定定时初值
+   9   1              T2H = 0xFF;             //设定定时初值
+  10   1              AUXR |= 0x10;           //启动定时器2
+  11   1              ES=1;
+  12   1      }
+  13          
+  14          void uart_send(uchar dat)
+  15          {
+  16   1              SBUF = dat;
+  17   1              while(!TI);//等待发送完毕
+  18   1              TI = 0;    
+  19   1      }
+  20          
+  21          void uart_print(uchar *str)
+  22          {
+  23   1              while(*str!=0)
+  24   1              {
+  25   2                      uart_send(*str);
+  26   2                      str++;
+  27   2              }
+  28   1      }
+  29          
+  30          void printNum(uint num)
+  31          {
+  32   1              char i;
+  33   1              uchar sss[5];
+  34   1              for(i=4;i>=0;i--)
+  35   1              {
+  36   2                      sss[i]=num%10;
+  37   2                      num/=10;
+  38   2              }
+  39   1              for(i=0;i<5;i++)
+  40   1              {
+  41   2                      uart_send(sss[i]+0x30);
+  42   2              }
+  43   1      }
+  44          
+  45          //void UART_Printf(const char * fmt,...)
+  46          //{
+  47          //  char xdata UART_String[128];
+  48          //  va_list ap;
+  49          //  va_start(ap,fmt);
+  50          //  vsprintf(UART_String,fmt,ap);
+  51          //  uart_print((uchar *)UART_String);
+  52          //  va_end(ap);
+  53          //}        
+  54          
+C51 COMPILER V9.56.0.0   UART                                                              04/09/2019 08:44:47 PAGE 2   
+
+  55          
+  56          uchar temp;
+  57          uchar xdata startReceive;
+  58          uchar xdata RxTimes;
+  59          uchar xdata uart_RxBuf[20];
+  60          
+  61          extern xdata uchar order;
+  62          extern xdata uchar time;
+  63          extern xdata uchar soundmark[3];
+  64          extern uchar start;
+  65          extern uchar second;
+  66          
+  67          extern uchar AA;
+  68          void uart_handel() interrupt 4
+  69          {
+  70   1              if(RI)
+  71   1              {
+  72   2                      RI=0;
+  73   2                      temp=SBUF;
+  74   2                      
+  75   2                      if(temp=='A')
+  76   2                      {
+  77   3                              startReceive=1;
+  78   3                              RxTimes=0;
+  79   3                      }
+  80   2                      else if(temp=='D')
+  81   2                      {
+  82   3                              AA = 0;
+  83   3                              order=uart_RxBuf[0]-0x30;
+  84   3                              time=(uart_RxBuf[2]-0x30)*10+(uart_RxBuf[3]-0x30);
+  85   3                              
+  86   3                              soundmark[0]=(uart_RxBuf[5]-0x30)*10+(uart_RxBuf[6]-0x30);
+  87   3                              soundmark[1]=(uart_RxBuf[7]-0x30)*10+(uart_RxBuf[8]-0x30);
+  88   3                              soundmark[2]=(uart_RxBuf[9]-0x30)*10+(uart_RxBuf[10]-0x30);
+  89   3                              start=1;
+  90   3                              second=0;
+  91   3                      }
+  92   2                      else
+  93   2                      {
+  94   3                              uart_RxBuf[RxTimes]=temp;
+  95   3                              RxTimes++;
+  96   3                      }
+  97   2              }
+  98   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    299    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =     22    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       7
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

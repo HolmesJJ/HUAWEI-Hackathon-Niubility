@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="bg_app">#F1F1F1</color>
+    <color name="tab_unselect">#c9c9c9</color>
+    <color name="bg_btn">#dadada</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite2">#f5f3f3</color>
+    <color name="colorBlue">#0000ff</color>
+    <color name="colorOrange">#ffac38</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorShade">#BF000000</color>
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/game_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/score_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/score_desc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Scores:"/>
+
+            <TextView
+                android:id="@+id/score_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/score_desc_txt"
+                android:layout_marginStart="5dp"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/leaderboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/Leaderboard_arrow"
+                android:text="Leaderboard"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/Leaderboard_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_arrow_right"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cubes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/solid_corners_bg"
+            android:layout_below="@+id/score_container">
+
+            <View
+                android:id="@+id/top_middle_cube"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/solid_corners_bg"/>
+
+            <View
+                android:id="@+id/top_left_cube"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                android:layout_toStartOf="@+id/top_middle_cube"
+                android:background="@drawable/solid_corners_bg" />
+
+            <View
+                android:id="@+id/top_right_cube"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                android:layout_toEndOf="@+id/top_middle_cube"
+                android:background="@drawable/solid_corners_bg" />
+
+            <View
+                android:id="@+id/bottom_middle_cube"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/dotted_corners_bg"
+                android:layout_below="@+id/top_middle_cube"/>
+
+            <View
+                android:id="@+id/bottom_left_cube"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="25dp"
+                android:layout_toStartOf="@+id/bottom_middle_cube"
+                android:background="@drawable/dotted_corners_bg"
+                android:layout_below="@+id/top_left_cube"/>
+
+            <View
+                android:id="@+id/bottom_right_cube"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/bottom_middle_cube"
+                android:background="@drawable/dotted_corners_bg"
+                android:layout_below="@+id/top_right_cube"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_toStartOf="@+id/bottom_left_cube"
+                android:layout_below="@+id/top_left_cube"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="25dp"
+                android:textSize="50sp"
+                android:text="/"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_toEndOf="@+id/bottom_right_cube"
+                android:layout_below="@+id/top_right_cube"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:textSize="50sp"
+                android:text="/"/>
+
+            <edu.nyp.deafapp.CustomView.CanMoveTextView
+                android:id="@+id/can_move_text_view_left"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/colorOrange"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+            <edu.nyp.deafapp.CustomView.CanMoveTextView
+                android:id="@+id/can_move_text_view_middle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/colorOrange"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+            <edu.nyp.deafapp.CustomView.CanMoveTextView
+                android:id="@+id/can_move_text_view_right"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/colorOrange"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/word_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/cubes_container"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:text="Ready"/>
+
+        <TextView
+            android:id="@+id/timer_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/word_txt"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:text="00:30"/>
+
+        <ImageView
+            android:id="@+id/physical_cube"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_physical_cube"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/start_btn"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:text="Start"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gif_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorShade"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:visibility="gone">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/well_done"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:src="@drawable/well_done"
+            android:background="@color/colorTransparent"
+            android:visibility="gone"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/try_again"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:src="@drawable/try_again"
+            android:background="@color/colorTransparent"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

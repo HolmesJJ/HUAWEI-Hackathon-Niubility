@@ -1,0 +1,96 @@
+@Sub SRSubdivision = SRSubdivisionPN
+    Tessellation = 128
+    Smoothing = 1
+@End
+
+@Sub SRSurface = SRSurfaceDetailNormalMap
+    Normal Map = @Tex file "../../03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_Normal.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_Normal.png" srgb 0 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Scale & Bias = 1
+    Flip X = 0
+    Flip Y = 0
+    Flip Z = 0
+    Object Space = 0
+    Detail Normal Map = @Tex file "../../../../_mappings/01_normals/rock_surface_moon_2.png" fileFull "E:/01_work/_mappings/01_normals/rock_surface_moon_2.png" srgb 0 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    UV Set = 0
+    Scale & Bias;detail = 1
+    Flip X;detail = 0
+    Flip Y;detail = 0
+    Flip Z;detail = 0
+    Detail Tiling = 10
+    Detail Offset = 0.07
+    Detail Weight Map = nil
+    Channel;detail = 0
+    Detail Weight = 0.07
+@End
+
+@Sub SRMicrosurface = SRMicrosurfaceGlossMap
+    Gloss Map = @Tex file "../../03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_Gloss.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_Gloss.png" srgb 0 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Channel = 0
+    Gloss = 1
+    Invert = 0
+@End
+
+@Sub SRAlbedo = SRAlbedoMap
+    Albedo Map = @Tex file "../../03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_Albedo.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_Albedo.png" srgb 1 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Color = 1 0.903935 0.87185
+@End
+
+@Sub SRDiffusion = SRDiffusionScatter
+    Scatter Map = nil
+    Scatter Depth (mm) = 1.3
+    Scatter Color = 1 0.855723 0.673577
+    Translucency Map = nil
+    Translucency = 3
+    Translucency Color = 0.63883 0.76875 1
+    Translucency Depth (mm) = 4
+    Translucency Scatter = 0.3
+    Fuzz Map = @Tex file "../../../../_mappings/01_Alphas/white_noise.jpg" fileFull "E:/01_work/_mappings/01_Alphas/white_noise.jpg" srgb 0 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Fuzz = 0.5
+    Fuzz Color = 0.540964 0.742924 1
+    Mask Fuzz with Gloss = 0
+@End
+
+@Sub SRReflectivity = SRReflectivityIOR
+    Index Map = nil
+    Index = 1.54
+    Index Hue = 1 1 1
+    Extinction = 0
+    Extinction Hue = 1 1 1
+@End
+
+@Sub SRReflection = SRReflectionGGX
+    Horizon Occlusion = 4
+@End
+
+@Sub SRReflection2 = SRReflectionGGX
+    Horizon Occlusion = 4
+    Secondary Gloss = 4
+    Secondary Intensity = 1
+    Secondary Intensity Color = 1 1 1
+    Secondary Fresnel = 0
+    Secondary Fresnel Color = 1 1 1
+@End
+
+@Sub SROcclusion = SROcclusionMap
+    Occlusion Map = @Tex file "../../03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_occlusion_mixed.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_occlusion_mixed.png" srgb 1 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Channel;occlusion = 0
+    Occlusion = 0.4
+    UV Set = 0
+    Vertex Channel = 0
+    Cavity Map = @Tex file "../../03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_curvature.png" fileFull "E:/01_work/02_zbrush/2018_09_01_teeth/03_Mappings/substance/gums/decimated/gums_low_quads_welded_gums_curvature.png" srgb 1 filter 1 mip 1 aniso 4 wrap 1 visible 1 @EndTex
+    Channel;cavity = 0
+    Diffuse Cavity = 0
+    Specular Cavity = 0.415842
+@End
+
+@Sub SRMerge = SRMerge
+    Texture Tiling = 1
+    Tile U = 1
+    Offset U = 0
+    Tile V = 1
+    Offset V = 0
+    Wrap = 1
+    Aniso = 2
+    Filter = 1
+@End
+

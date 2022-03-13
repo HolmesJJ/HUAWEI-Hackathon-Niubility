@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/compare_result_tv"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/result_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/result_line_btn_container"/>
+
+    <edu.nyp.deafapp.CustomView.RangeSeekBar
+        android:id="@+id/audio_play_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/result_line_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/up_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_up"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/play_btn"
+            android:clickable="true"/>
+
+        <ImageView
+            android:id="@+id/play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_marginEnd="10dp"
+            android:layout_centerInParent="true"
+            android:clickable="true"/>
+
+        <ImageView
+            android:id="@+id/down_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/play_btn"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</RelativeLayout>

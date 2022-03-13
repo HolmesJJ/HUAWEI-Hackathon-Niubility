@@ -1,0 +1,9 @@
+".\Objects\main.obj",
+".\Objects\uart.obj",
+".\Objects\delay.obj",
+".\Objects\74hc595.obj",
+".\Objects\24L01.obj",
+".\Objects\timer.obj",
+".\Objects\ADC.obj" 
+TO ".\Objects\cx" 
+PRINT(".\Listings\cx.m51") RAMSIZE(256) 

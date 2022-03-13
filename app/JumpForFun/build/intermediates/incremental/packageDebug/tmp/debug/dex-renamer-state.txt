@@ -1,0 +1,4 @@
+#Wed Dec 16 11:23:25 CST 2020
+base.0=D\:\\English\\Unity\\Work\\TiaoYiTiao3\\TiaoYiTiao\\AS\\TiaoYiTiao\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex

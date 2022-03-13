@@ -1,0 +1,120 @@
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 05:33:51 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "config.h"
+   2          
+   3          #define jiqqihao 1 //1 2
+   4          
+   5          uchar shownum=0;
+   6          
+   7          uchar xdata order;
+   8          uchar xdata time;
+   9          uchar xdata soundmark[3];
+  10          uchar xdata sit1;
+  11          uchar xdata sit2;
+  12          uchar xdata sit3;
+  13          uchar xdata sta=0;
+  14          
+  15          uint msTime;
+  16          void main()
+  17          {
+  18   1              uchar i;
+  19   1              uchar xdata RxBuf[32];  
+  20   1              delay_ms(500);
+  21   1              EA=1;
+  22   1              init_Timer0();
+  23   1              InitADC();
+  24   1              init_NRF24L01() ;
+  25   1              
+  26   1              
+  27   1              delay_ms(100);
+  28   1              get_ADC_Result(7);
+  29   1              get_ADC_Result(7);
+  30   1              
+  31   1              if(get_ADC_Result(7)>134)//µÁ—πµÕ
+  32   1              {
+  33   2                      shownum=betL;
+  34   2                      delay_ms(3000);
+  35   2                      shownum=0;
+  36   2                      delay_ms(10);
+  37   2                      EA=0;
+  38   2                      while(1);//–›√ﬂ
+  39   2              }
+  40   1              
+  41   1              
+  42   1              shownum=kaiji;
+  43   1              delay_ms(1000);
+  44   1              shownum=0;
+  45   1              
+  46   1              
+  47   1              init_NRF24L01() ;
+  48   1              uart_init();
+  49   1              SetRX_Mode();
+  50   1              
+  51   1              
+  52   1              while(1)
+  53   1              {
+  54   2                      
+C51 COMPILER V9.56.0.0   MAIN                                                              04/09/2019 05:33:51 PAGE 2   
+
+  55   2                      sit1=check_AD();
+  56   2                      
+  57   2                      if(nRF24L01_RxPacket(RxBuf)!=0)
+  58   2                      {
+  59   3                              if(RxBuf[0]==jiqqihao)
+  60   3                              {
+  61   4                                      
+  62   4                                      shownum=RxBuf[1];
+  63   4                                      
+  64   4                                      TxBuf[0]=jiqqihao;
+  65   4                                      TxBuf[1]=sit1;
+  66   4                                      
+  67   4                                      SetTX_Mode();
+  68   4                                      nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+  69   4                                      SPI_RW_Reg(WRITE_REG+STATUS,0XFF); 
+  70   4                                      SetTX_Mode();
+  71   4                                      nRF24L01_TxPacket(TxBuf);       // Transmit Tx buffer data
+  72   4                                      SPI_RW_Reg(WRITE_REG+STATUS,0XFF);                              
+  73   4                                      SetRX_Mode();
+  74   4                              }
+  75   3                              
+  76   3                              else if(RxBuf[0]==10)//ø’
+  77   3                              {
+  78   4                                      shownum=0;
+  79   4                              }
+  80   3                              else if(RxBuf[0]==11)//∂‘
+  81   3                              {
+  82   4                                      shownum=yes;
+  83   4                              }
+  84   3                              else if(RxBuf[0]==12)//¥Ì
+  85   3                              {
+  86   4                                      shownum=no;
+  87   4                              }
+  88   3                              
+  89   3                              SetRX_Mode();
+  90   3                      }
+  91   2                              
+  92   2              }
+  93   1      }
+*** WARNING C280 IN LINE 18 OF main.c: 'i': unreferenced local variable
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    209    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =      9      32
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

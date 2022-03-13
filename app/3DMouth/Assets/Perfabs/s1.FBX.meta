@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: 98bf712a7699c3c4b86c63d84cc71a29
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 HeadNub
+    100008: Bip001 L Calf
+    100010: Bip001 L Clavicle
+    100012: Bip001 L Finger0
+    100014: Bip001 L Finger01
+    100016: Bip001 L Finger02
+    100018: Bip001 L Finger0Nub
+    100020: Bip001 L Finger1
+    100022: Bip001 L Finger11
+    100024: Bip001 L Finger12
+    100026: Bip001 L Finger1Nub
+    100028: Bip001 L Finger2
+    100030: Bip001 L Finger21
+    100032: Bip001 L Finger22
+    100034: Bip001 L Finger2Nub
+    100036: Bip001 L Foot
+    100038: Bip001 L Forearm
+    100040: Bip001 L Hand
+    100042: Bip001 L Thigh
+    100044: Bip001 L Toe0
+    100046: Bip001 L Toe0Nub
+    100048: Bip001 L UpperArm
+    100050: Bip001 Neck
+    100052: Bip001 Pelvis
+    100054: Bip001 R Calf
+    100056: Bip001 R Clavicle
+    100058: Bip001 R Finger0
+    100060: Bip001 R Finger01
+    100062: Bip001 R Finger02
+    100064: Bip001 R Finger0Nub
+    100066: Bip001 R Finger1
+    100068: Bip001 R Finger11
+    100070: Bip001 R Finger12
+    100072: Bip001 R Finger1Nub
+    100074: Bip001 R Finger2
+    100076: Bip001 R Finger21
+    100078: Bip001 R Finger22
+    100080: Bip001 R Finger2Nub
+    100082: Bip001 R Foot
+    100084: Bip001 R Forearm
+    100086: Bip001 R Hand
+    100088: Bip001 R Thigh
+    100090: Bip001 R Toe0
+    100092: Bip001 R Toe0Nub
+    100094: Bip001 R UpperArm
+    100096: Bip001 Spine
+    100098: lef_eye_black
+    100100: left_eye
+    100102: left_eye_front
+    100104: left_eye_iris
+    100106: lower_teeth
+    100108: minion_body
+    100110: minion_body001
+    100112: minion_body002
+    100114: minion_body003
+    100116: minion_body004
+    100118: minion_goggles
+    100120: minion_goggles_MeshPart0
+    100122: minion_goggles_MeshPart1
+    100124: minion_hair
+    100126: minion_suit001
+    100128: minion_suit002
+    100130: minion_suit003
+    100132: minion_tongue
+    100134: pCube10
+    100136: pCube11
+    100138: pCube12
+    100140: pCube13
+    100142: pCube14
+    100144: pCube15
+    100146: pCube16
+    100148: pCube17
+    100150: pCube2
+    100152: pCube3
+    100154: pCube4
+    100156: pCube5
+    100158: pCube6
+    100160: pCube7
+    100162: pCube8
+    100164: pCube9
+    100166: pCylinder1
+    100168: pCylinder2
+    100170: right_eye
+    100172: right_eye_black
+    100174: right_eye_front
+    100176: right_eye_iris
+    100178: //RootNode
+    100180: upper_teeth
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 HeadNub
+    400008: Bip001 L Calf
+    400010: Bip001 L Clavicle
+    400012: Bip001 L Finger0
+    400014: Bip001 L Finger01
+    400016: Bip001 L Finger02
+    400018: Bip001 L Finger0Nub
+    400020: Bip001 L Finger1
+    400022: Bip001 L Finger11
+    400024: Bip001 L Finger12
+    400026: Bip001 L Finger1Nub
+    400028: Bip001 L Finger2
+    400030: Bip001 L Finger21
+    400032: Bip001 L Finger22
+    400034: Bip001 L Finger2Nub
+    400036: Bip001 L Foot
+    400038: Bip001 L Forearm
+    400040: Bip001 L Hand
+    400042: Bip001 L Thigh
+    400044: Bip001 L Toe0
+    400046: Bip001 L Toe0Nub
+    400048: Bip001 L UpperArm
+    400050: Bip001 Neck
+    400052: Bip001 Pelvis
+    400054: Bip001 R Calf
+    400056: Bip001 R Clavicle
+    400058: Bip001 R Finger0
+    400060: Bip001 R Finger01
+    400062: Bip001 R Finger02
+    400064: Bip001 R Finger0Nub
+    400066: Bip001 R Finger1
+    400068: Bip001 R Finger11
+    400070: Bip001 R Finger12
+    400072: Bip001 R Finger1Nub
+    400074: Bip001 R Finger2
+    400076: Bip001 R Finger21
+    400078: Bip001 R Finger22
+    400080: Bip001 R Finger2Nub
+    400082: Bip001 R Foot
+    400084: Bip001 R Forearm
+    400086: Bip001 R Hand
+    400088: Bip001 R Thigh
+    400090: Bip001 R Toe0
+    400092: Bip001 R Toe0Nub
+    400094: Bip001 R UpperArm
+    400096: Bip001 Spine
+    400098: lef_eye_black
+    400100: left_eye
+    400102: left_eye_front
+    400104: left_eye_iris
+    400106: lower_teeth
+    400108: minion_body
+    400110: minion_body001
+    400112: minion_body002
+    400114: minion_body003
+    400116: minion_body004
+    400118: minion_goggles
+    400120: minion_goggles_MeshPart0
+    400122: minion_goggles_MeshPart1
+    400124: minion_hair
+    400126: minion_suit001
+    400128: minion_suit002
+    400130: minion_suit003
+    400132: minion_tongue
+    400134: pCube10
+    400136: pCube11
+    400138: pCube12
+    400140: pCube13
+    400142: pCube14
+    400144: pCube15
+    400146: pCube16
+    400148: pCube17
+    400150: pCube2
+    400152: pCube3
+    400154: pCube4
+    400156: pCube5
+    400158: pCube6
+    400160: pCube7
+    400162: pCube8
+    400164: pCube9
+    400166: pCylinder1
+    400168: pCylinder2
+    400170: right_eye
+    400172: right_eye_black
+    400174: right_eye_front
+    400176: right_eye_iris
+    400178: //RootNode
+    400180: upper_teeth
+    2300000: lef_eye_black
+    2300002: left_eye
+    2300004: left_eye_front
+    2300006: left_eye_iris
+    2300008: lower_teeth
+    2300010: minion_body001
+    2300012: minion_body004
+    2300014: minion_goggles_MeshPart0
+    2300016: minion_goggles_MeshPart1
+    2300018: minion_hair
+    2300020: minion_suit001
+    2300022: minion_suit003
+    2300024: minion_tongue
+    2300026: pCube10
+    2300028: pCube11
+    2300030: pCube12
+    2300032: pCube13
+    2300034: pCube14
+    2300036: pCube15
+    2300038: pCube16
+    2300040: pCube17
+    2300042: pCube2
+    2300044: pCube3
+    2300046: pCube4
+    2300048: pCube5
+    2300050: pCube6
+    2300052: pCube7
+    2300054: pCube8
+    2300056: pCube9
+    2300058: pCylinder1
+    2300060: pCylinder2
+    2300062: right_eye
+    2300064: right_eye_black
+    2300066: right_eye_front
+    2300068: right_eye_iris
+    2300070: upper_teeth
+    3300000: lef_eye_black
+    3300002: left_eye
+    3300004: left_eye_front
+    3300006: left_eye_iris
+    3300008: lower_teeth
+    3300010: minion_body001
+    3300012: minion_body004
+    3300014: minion_goggles_MeshPart0
+    3300016: minion_goggles_MeshPart1
+    3300018: minion_hair
+    3300020: minion_suit001
+    3300022: minion_suit003
+    3300024: minion_tongue
+    3300026: pCube10
+    3300028: pCube11
+    3300030: pCube12
+    3300032: pCube13
+    3300034: pCube14
+    3300036: pCube15
+    3300038: pCube16
+    3300040: pCube17
+    3300042: pCube2
+    3300044: pCube3
+    3300046: pCube4
+    3300048: pCube5
+    3300050: pCube6
+    3300052: pCube7
+    3300054: pCube8
+    3300056: pCube9
+    3300058: pCylinder1
+    3300060: pCylinder2
+    3300062: right_eye
+    3300064: right_eye_black
+    3300066: right_eye_front
+    3300068: right_eye_iris
+    3300070: upper_teeth
+    4300000: minion_body
+    4300002: minion_hair
+    4300004: lower_teeth
+    4300006: pCube6
+    4300008: pCube5
+    4300010: pCube4
+    4300012: pCube2
+    4300014: pCube3
+    4300016: pCube7
+    4300018: pCube8
+    4300020: pCube9
+    4300022: minion_tongue
+    4300024: upper_teeth
+    4300026: pCube17
+    4300028: pCube16
+    4300030: pCube15
+    4300032: pCube11
+    4300034: pCube10
+    4300036: pCube12
+    4300038: pCube13
+    4300040: pCube14
+    4300042: minion_goggles_MeshPart0
+    4300044: minion_goggles_MeshPart1
+    4300046: pCylinder1
+    4300048: pCylinder2
+    4300050: left_eye
+    4300052: left_eye_iris
+    4300054: lef_eye_black
+    4300056: left_eye_front
+    4300058: right_eye
+    4300060: right_eye_iris
+    4300062: right_eye_black
+    4300064: right_eye_front
+    4300066: minion_body001
+    4300068: minion_suit001
+    4300070: minion_body002
+    4300072: minion_body003
+    4300074: minion_suit002
+    4300076: minion_body004
+    4300078: minion_suit003
+    7400000: Take 001
+    7400002: Take 001 (1)
+    9500000: //RootNode
+    13700000: minion_body
+    13700002: minion_body002
+    13700004: minion_body003
+    13700006: minion_suit002
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 31321b249a409f747ad6f748d50e8ef9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #48'
+    second: {fileID: 2100000, guid: 5b8832837a5e48b44a4c4518247e6fc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #70'
+    second: {fileID: 2100000, guid: e8521e58f7f41084ebcb54a0ecf1de73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #71'
+    second: {fileID: 2100000, guid: 52ccf23a7aea08f41ade5bdd6aed3152, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #72'
+    second: {fileID: 2100000, guid: 12f65919cebc5c942a70f066a96078a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #73'
+    second: {fileID: 2100000, guid: 03140bf5b3ccd144197a6be23b5f7e94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #75'
+    second: {fileID: 2100000, guid: 836281fbd2d5ef84cb783e5cbd2a98c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackMat
+    second: {fileID: 2100000, guid: a279a604362385b498182f57dcac9f98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: irisMat
+    second: {fileID: 2100000, guid: d8903c26312f6fe4586681c93daf04ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouth_insideMat
+    second: {fileID: 2100000, guid: 24b797dc51beec04ea3b59feea4bd534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teethMat
+    second: {fileID: 2100000, guid: 963bb1befce8e1047b27a39459fc97e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tongueMat
+    second: {fileID: 2100000, guid: 63b8a60959f41cc4699c1b8f50cca1f8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.19574468
+        functionName: Play
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001 (1)
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,73 @@
+Added Component: Designator=DZ1(DianZhen)
+Added Component: Designator=DZ2(DianZhen)
+Added Component: Designator=DZ3(DianZhen)
+Added Component: Designator=DZ4(DianZhen)
+Added Pin To Net: NetName=HANG1 Pin=DZ1-1
+Added Pin To Net: NetName=LIE1 Pin=DZ1-2
+Added Pin To Net: NetName=HANG2 Pin=DZ1-3
+Added Pin To Net: NetName=LIE2 Pin=DZ1-4
+Added Pin To Net: NetName=HANG3 Pin=DZ1-5
+Added Pin To Net: NetName=LIE3 Pin=DZ1-6
+Added Pin To Net: NetName=HANG4 Pin=DZ1-7
+Added Pin To Net: NetName=LIE4 Pin=DZ1-8
+Added Pin To Net: NetName=HANG5 Pin=DZ1-9
+Added Pin To Net: NetName=LIE5 Pin=DZ1-10
+Added Pin To Net: NetName=HANG6 Pin=DZ1-11
+Added Pin To Net: NetName=LIE6 Pin=DZ1-12
+Added Pin To Net: NetName=HANG7 Pin=DZ1-13
+Added Pin To Net: NetName=LIE7 Pin=DZ1-14
+Added Pin To Net: NetName=HANG8 Pin=DZ1-15
+Added Pin To Net: NetName=LIE8 Pin=DZ1-16
+Added Pin To Net: NetName=HANG9 Pin=DZ2-1
+Added Pin To Net: NetName=LIE1 Pin=DZ2-2
+Added Pin To Net: NetName=HANG10 Pin=DZ2-3
+Added Pin To Net: NetName=LIE2 Pin=DZ2-4
+Added Pin To Net: NetName=HANG11 Pin=DZ2-5
+Added Pin To Net: NetName=LIE3 Pin=DZ2-6
+Added Pin To Net: NetName=HANG12 Pin=DZ2-7
+Added Pin To Net: NetName=LIE4 Pin=DZ2-8
+Added Pin To Net: NetName=HANG13 Pin=DZ2-9
+Added Pin To Net: NetName=LIE5 Pin=DZ2-10
+Added Pin To Net: NetName=HANG14 Pin=DZ2-11
+Added Pin To Net: NetName=LIE6 Pin=DZ2-12
+Added Pin To Net: NetName=HANG15 Pin=DZ2-13
+Added Pin To Net: NetName=LIE7 Pin=DZ2-14
+Added Pin To Net: NetName=HANG16 Pin=DZ2-15
+Added Pin To Net: NetName=LIE8 Pin=DZ2-16
+Added Pin To Net: NetName=HANG1 Pin=DZ3-1
+Added Pin To Net: NetName=LIE9 Pin=DZ3-2
+Added Pin To Net: NetName=HANG2 Pin=DZ3-3
+Added Pin To Net: NetName=LIE10 Pin=DZ3-4
+Added Pin To Net: NetName=HANG3 Pin=DZ3-5
+Added Pin To Net: NetName=LIE11 Pin=DZ3-6
+Added Pin To Net: NetName=HANG4 Pin=DZ3-7
+Added Pin To Net: NetName=LIE12 Pin=DZ3-8
+Added Pin To Net: NetName=HANG5 Pin=DZ3-9
+Added Pin To Net: NetName=LIE13 Pin=DZ3-10
+Added Pin To Net: NetName=HANG6 Pin=DZ3-11
+Added Pin To Net: NetName=LIE14 Pin=DZ3-12
+Added Pin To Net: NetName=HANG7 Pin=DZ3-13
+Added Pin To Net: NetName=LIE15 Pin=DZ3-14
+Added Pin To Net: NetName=HANG8 Pin=DZ3-15
+Added Pin To Net: NetName=LIE17 Pin=DZ3-16
+Added Pin To Net: NetName=HANG9 Pin=DZ4-1
+Added Pin To Net: NetName=LIE9 Pin=DZ4-2
+Added Pin To Net: NetName=HANG10 Pin=DZ4-3
+Added Pin To Net: NetName=LIE10 Pin=DZ4-4
+Added Pin To Net: NetName=HANG11 Pin=DZ4-5
+Added Pin To Net: NetName=LIE11 Pin=DZ4-6
+Added Pin To Net: NetName=HANG12 Pin=DZ4-7
+Added Pin To Net: NetName=LIE12 Pin=DZ4-8
+Added Pin To Net: NetName=HANG13 Pin=DZ4-9
+Added Pin To Net: NetName=LIE13 Pin=DZ4-10
+Added Pin To Net: NetName=HANG14 Pin=DZ4-11
+Added Pin To Net: NetName=LIE14 Pin=DZ4-12
+Added Pin To Net: NetName=HANG15 Pin=DZ4-13
+Added Pin To Net: NetName=LIE15 Pin=DZ4-14
+Added Pin To Net: NetName=HANG16 Pin=DZ4-15
+Added Pin To Net: NetName=LIE17 Pin=DZ4-16
+Added Member To Class: ClassName=顶板原理图 Member=Component DZ1 DianZhen
+Added Member To Class: ClassName=顶板原理图 Member=Component DZ2 DianZhen
+Added Member To Class: ClassName=顶板原理图 Member=Component DZ3 DianZhen
+Added Member To Class: ClassName=顶板原理图 Member=Component DZ4 DianZhen
+Added Room: Name=顶板原理图
